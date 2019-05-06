@@ -3,10 +3,10 @@
 
 def solution(A, B):
     # write your code in Python 3.6
-    int numA = A
-    int numB = B
-    int countA = 0
-    int countB = 0
+    numA = A
+    numB = B
+    countA = 0
+    countB = 0
     
     if numA == 0:
         while numB > 0:
@@ -16,16 +16,23 @@ def solution(A, B):
             print('a')
     
     while numA > 0 and numB > 0:
-        if numA > 2 and countA < 3:
+        if numA > 2 and countA < 2:
             countB = 0
             print('a')
             print('a')
             numA -= 2
             countA += 2
-        elif numB > 2 and countB < 3:
+        elif numB > 2 and countB < 2:
             countA = 0
             print('b')
             print('b')
             numB -= 2
             countB += 2
+        else: #numA <2 and numB<2
+            if countA > countB:
+                print('b')
+                numB -= 1
+            else:
+                print('a')
+                numA -= 1
     pass
