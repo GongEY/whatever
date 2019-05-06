@@ -1,0 +1,31 @@
+# you can write to stdout for debugging purposes, e.g.
+# print("this is a debug message")
+
+def solution(A, B):
+    # write your code in Python 3.6
+    int numA = A
+    int numB = B
+    int countA = 0
+    int countB = 0
+    
+    if numA == 0:
+        while numB > 0:
+            print('b')
+    elif numB == 0:
+        while numA > 0:
+            print('a')
+    
+    while numA > 0 and numB > 0:
+        if numA > 2 and countA < 3:
+            countB = 0
+            print('a')
+            print('a')
+            numA -= 2
+            countA += 2
+        elif numB > 2 and countB < 3:
+            countA = 0
+            print('b')
+            print('b')
+            numB -= 2
+            countB += 2
+    pass
